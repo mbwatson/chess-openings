@@ -1,0 +1,147 @@
+[
+    {
+        "name": "Petrov Defense",
+        "id": "petrov-defense",
+        "perspective": "black",
+        "pgn": "1. e4 e5 2. Nf3 Nf6"
+    },
+    {
+        "name": "Stafford Gambit",
+        "id": "stafford-gambit",
+        "perspective": "black",
+        "pgn": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6"
+    },
+    {
+        "name": "Queen's Gambit",
+        "id": "queens-gambit",
+        "perspective": "white",
+        "pgn": "1. d4 d5 2. c4"
+    },
+    {
+        "name": "King's Gambit",
+        "id": "kings-gambit",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. f4"
+    },
+    {
+        "name": "Budapest Gambit",
+        "id": "budapest-gambit",
+        "perspective": "black",
+        "pgn": "1. d4 Nf6 2. c4 e5"
+    },
+    {
+        "name": "Halloween Gambit",
+        "id": "halloween-gambit",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Nxe5"
+    },
+    {
+        "name": "Evans Gambit",
+        "id": "evans-gambit",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4"
+    },
+    {
+        "name": "Ruy Lopez",
+        "id": "ruy-lopez",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. Bb5"
+    },
+    {
+        "name": "Italian Game",
+        "id": "italian-game",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. Bc4"
+    },
+    {
+        "name": "Siclian Defense",
+        "id": "siclian-defense",
+        "perspective": "black",
+        "pgn": "1. e4 c5"
+    },
+    {
+        "name": "French Defense",
+        "id": "french-defense",
+        "perspective": "black",
+        "pgn": "1. e4 e6"
+    },
+    {
+        "name": "Caro-Kann Defense",
+        "id": "caro-kann-defense",
+        "perspective": "black",
+        "pgn": "1. e4 c6"
+    },
+    {
+        "name": "Pirc Defense",
+        "id": "pirc-defense",
+        "perspective": "black",
+        "pgn": "1. e4 d6 2. d4 Nf6 3. Nc3 g6"
+    },
+    {
+        "name": "Indian Defense",
+        "id": "indian-defense",
+        "perspective": "black",
+        "pgn": "1. d4 Nf6"
+    },
+    {
+        "name": "English Opening",
+        "id": "english-opening",
+        "perspective": "white",
+        "pgn": "1. c4"
+    },
+    {
+        "name": "Reti Opening",
+        "id": "reti-opening",
+        "perspective": "white",
+        "pgn": "1. Nf3"
+    },
+    {
+        "name": "Alekhine Defense",
+        "id": "alekhine-defense",
+        "perspective": "",
+        "pgn": "1. e4 Nf6 2. e5 Nd5 3. d4 d6"
+    },
+    {
+        "name": "Belgrade Gambit",
+        "id": "belgrade-gambit",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. d4 exd4 5. Nd5"
+    },
+    {
+        "name": "Benko Gambit",
+        "id": "benko-gambit",
+        "perspective": "black",
+        "pgn": "1. d4 Nf6 2. c4 c5 3. d5 b5"
+    },
+    {
+        "name": "Benoni Defense",
+        "id": "benoni-defense",
+        "perspective": "black",
+        "pgn": "1. d4 Nf6 2. c4 c5 3. d5"
+    },
+    {
+        "name": "Clorado Gambit",
+        "id": "colorado-gambit",
+        "perspective": "black",
+        "pgn": "1. e4 Nc6 2. Nf3 f5"
+    },
+    {
+        "name": "Danish Gambit",
+        "id": "danish-gambit",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2.d4 exd4 3.c3"
+    },
+    {
+        "name": "Elephant Gambit",
+        "id": "elephant-gambit",
+        "perspective": "black",
+        "pgn": "1. e4 e5 2. Nf3 d5"
+    },
+    {
+        "name": "Falkbeer Counter-Gambit",
+        "id": "falkbeer-counter-gambit",
+        "perspective": "white",
+        "pgn": "1. e4 e5 2. f4 d5"
+    }
+
+]
