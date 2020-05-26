@@ -2,19 +2,25 @@
     import Card from '../card/card.svelte'
 
     export let opening
+    import Board from './board.svelte'
+    import CurrentMoveList from './moves-list.svelte'
+    import MovesTable from './moves-table.svelte'
+    let showMoves = false
+
     const movesArray = opening.pgn.split(/\d{1,2}\.\ /).slice(1).map(move => move.trim()).map(movePair => movePair.split(' ')).reduce((arr, move) => arr.concat(move), [])
     let moveIndex = 0
     import PrevIcon from '../icons/prev-icon.svelte'
     import NextIcon from '../icons/next-icon.svelte'
     import FirstIcon from '../icons/first-icon.svelte'
     import LastIcon from '../icons/last-icon.svelte'
-    import MoveList from './move-list.svelte'
 
     import Chess from 'chess.js'
     let game = new Chess()
 
     $: currentMoves = movesArray.slice(0, moveIndex)
     $: currentPosition = moveIndex >= 0 && '   ' + game.ascii().trim() + '  '
+
+    const handleToggleShowMoves = () => showMoves = !showMoves
 
     const handleGoToStart = () => {
         moveIndex = 0
@@ -37,14 +43,15 @@
 <Card>
     <div slot="header">
         <h2 class="title">{opening.name}</h2>
-        <h3 class="subtitle">{opening.pgn}</h3>
     </div>
     
-    <div slot="body">
-        <pre class="ascii-board">{currentPosition}</pre>
-
-        <br>
-
+    <div slot="body" class="explorer-interior" on:click={handleToggleShowMoves}>
+        <div class="board-container">
+            <Board position={currentPosition} />
+        </div>
+        <div class="moves-table-container">
+            <MovesTable moves={movesArray} visible={showMoves} />
+        </div>
     </div>
 
     <div slot="actions" class="actions">
@@ -55,17 +62,24 @@
     </div>
 
     <div slot="footer">
-        <MoveList moves={movesArray} index={moveIndex} />
+        <CurrentMoveList moves={movesArray} index={moveIndex} />
     </div>
 </Card>
 
 <style>
-    .title, .subtitle {
+    .title {
         text-align: center;
     }
-    .ascii-board {
-        text-align: center;
-        color: var(--color-secondary);
+    .explorer-interior {
+        display: flex;
+        flex-direction: row;
+    }
+    .explorer-interior .board-container {
+        flex: 1;
+        padding: 0.5rem;
+    }
+    .explorer-interior .moves-table-container {
+        border-left: 1px solid var(--color-secondary);
     }
     .actions {
         background-color: var(--color-secondary);

@@ -4,7 +4,9 @@
 :root {
   --color-primary: lightsalmon;
   --color-secondary: #456;
+  --color-secondary-light: #abc;
   --color-dark: #223;
+  --color-grey: #aab;
   --color-light: #f4f4f4;
   --color-danger: #dc3545;
   --color-success: #28a745;

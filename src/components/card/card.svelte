@@ -34,11 +34,11 @@
     }
     .card-body {
         flex: 1;
-        padding: 1rem;
+        /*padding: 1rem;*/
         background-color: #fff;
-        border-width: 1px 0;
-        border-style: solid;
-        border-color: #ccc;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--color-secondary);
     }
     .card-actions {
         padding: 0;
