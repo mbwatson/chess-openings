@@ -1,12 +1,14 @@
 <script>
     export let moves
     const pairMoves = arr => arr.reduce((result, value, i, array) => {
-        if (i % 2 === 0) result.push(array.slice(i, i + 2));
+        if (i % 2 === 0) result.push({ white: array[i], black: array[i + 1]});
         return result
     }, [])
     $: movesArray = moves.length % 2 === 0
         ? pairMoves(moves)
-        : pairMoves(moves.slice(0, -1)).concat(moves.slice(-1))
+        : pairMoves(moves.slice(0, -1)).concat({white: moves[moves.length - 1]})
+    $: console.log(moves)
+    $: console.table(movesArray)
 </script>
 
 <table class="move-table">
@@ -15,8 +17,8 @@
             {#each movesArray as turn, i (i)}
                 <tr>
                     <th>{i+1}</th>
-                    <td>{turn[0]}</td>
-                    <td>{turn[1]}</td>
+                    <td>{turn.white}</td>
+                    <td>{turn.black || ''}</td>
                 </tr>
             {/each}
         </tbody>
@@ -25,6 +27,7 @@
 
 <style>
     .move-table {
+        width: 100px;
         background-color: var(--color-white);
         margin: 0 auto;
         border-collapse: collapse;
