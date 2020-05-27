@@ -50,7 +50,7 @@
             <Board position={currentPosition} />
         </div>
         <div class="moves-table-container">
-            <MovesTable moves={movesArray} visible={showMoves} />
+            <MovesTable moves={movesArray} index={moveIndex} visible={showMoves} />
         </div>
     </div>
 

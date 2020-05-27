@@ -2,7 +2,7 @@
     export let moves
     export let index
     const pairMoves = arr => arr.reduce((result, value, i, array) => {
-        if (i % 2 === 0) result.push(`${array[i]} ${array[i + 1]}`);
+        if (i % 2 === 0) result.push(`${array[i]} ${array[i + 1]}`)
         return result
     }, [])
     $: turns = index % 2 === 0
