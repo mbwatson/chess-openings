@@ -55,10 +55,10 @@
     </div>
 
     <div slot="footer" class="actions">
-        <button class="btn btn-xs btn-primary" on:click={handleGoToStart}><FirstIcon fill="var(--color-dark)" size="16" /></button>
-        <button class="btn btn-xs btn-primary" on:click={handlePreviousMove}><PrevIcon fill="var(--color-dark)" size="16" /></button>
-        <button class="btn btn-xs btn-primary" on:click={handleNextMove}><NextIcon fill="var(--color-dark)" size="16" /></button>
-        <button class="btn btn-xs btn-primary" on:click={handleGoToEnd}><LastIcon fill="var(--color-dark)" size="16" /></button>
+        <button class="btn btn-xs btn-primary" disabled={ moveIndex === 0 } on:click={handleGoToStart}><FirstIcon fill="var(--color-dark)" size="16" /></button>
+        <button class="btn btn-xs btn-primary" disabled={ moveIndex === 0 }  on:click={handlePreviousMove}><PrevIcon fill="var(--color-dark)" size="16" /></button>
+        <button class="btn btn-xs btn-primary" disabled={ moveIndex === movesArray.length }  on:click={handleNextMove}><NextIcon fill="var(--color-dark)" size="16" /></button>
+        <button class="btn btn-xs btn-primary" disabled={ moveIndex === movesArray.length }  on:click={handleGoToEnd}><LastIcon fill="var(--color-dark)" size="16" /></button>
     </div>
 </Card>
 
