@@ -5,6 +5,7 @@
     import Footer from './components/layout/footer.svelte'
     import Explorer from './components/chess/explorer.svelte'
     import CardGrid from './components/card/card-grid.svelte'
+    import GitHubLogo from './components/icons/github-icon.svelte'
     let query = ''
     $: filteredOpenings = openings.filter(({ name }) => name.toLowerCase().includes(query.toLowerCase()))
 </script>
@@ -23,7 +24,16 @@
     </CardGrid>
 </Main>
 <Footer>
-    &copy; {(new Date()).getFullYear()}
+    <div class="footer-contents">
+        <span>
+            &copy; {(new Date()).getFullYear()}
+        </span>
+        <span>
+            <a href="https://github.com/mbwatson/chess-openings" target="_blank" rel="noopener noreferrer">
+                <GitHubLogo size={ 36 } fill="var(--color-grey)" />
+            </a>
+        </span>
+    </div>
 </Footer>
 
 <style>
@@ -32,5 +42,17 @@
     }
     .notice {
         text-align: center;
+    }
+    .footer-contents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        transition: filter 250ms;
+        filter: brightness(0.75);
+    }
+    a:hover {
+        filter: brightness(1.0);
     }
 </style>
