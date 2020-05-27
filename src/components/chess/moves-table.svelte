@@ -33,14 +33,8 @@
         margin: 0 auto;
         border-collapse: collapse;
     }
-    .moves-table td, .moves-table th {
-        padding: 0.25rem 0.5rem;
-    }
-    .moves-table td {
-        color: var(--color-grey);
-    }
-    .moves-table td.complete {
-        color: var(--color-secondary);
+    .moves-table tr {
+        border-bottom: 1px solid var(--color-secondary);
     }
     .moves-table th {
         font-weight: bold;
@@ -48,7 +42,14 @@
         color: var(--color-secondary);
         border-right: 1px solid var(--color-secondary);
     }
-    .moves-table tr {
-        border-bottom: 1px solid var(--color-secondary);
+    .moves-table td, .moves-table th {
+        padding: 0.25rem 0.5rem;
+    }
+    .moves-table td {
+        transition: color 250ms;
+        color: var(--color-grey);
+    }
+    .moves-table td.complete {
+        color: var(--color-secondary);
     }
 </style>
