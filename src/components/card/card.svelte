@@ -11,9 +11,6 @@
     <div class="card-footer">
         <slot name="footer"></slot>
     </div>
-    <div class="card-actions">
-        <slot name="actions"></slot>
-    </div>
 </article>
 
 <style>
@@ -40,12 +37,8 @@
         border-bottom-style: solid;
         border-bottom-color: var(--color-secondary);
     }
-    .card-actions {
-        padding: 0;
-        background-color: #fff;
-    }
     .card-footer {
-        padding: 0.25rem 0.5rem;
+        padding: 0;
         background-color: #fff;
     }
 </style>

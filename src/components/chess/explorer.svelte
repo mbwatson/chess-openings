@@ -54,15 +54,11 @@
         </div>
     </div>
 
-    <div slot="actions" class="actions">
+    <div slot="footer" class="actions">
         <button class="btn btn-xs btn-primary" on:click={handleGoToStart}><FirstIcon fill="var(--color-dark)" size="16" /></button>
         <button class="btn btn-xs btn-primary" on:click={handlePreviousMove}><PrevIcon fill="var(--color-dark)" size="16" /></button>
         <button class="btn btn-xs btn-primary" on:click={handleNextMove}><NextIcon fill="var(--color-dark)" size="16" /></button>
         <button class="btn btn-xs btn-primary" on:click={handleGoToEnd}><LastIcon fill="var(--color-dark)" size="16" /></button>
-    </div>
-
-    <div slot="footer">
-        <CurrentMoveList moves={movesArray} index={moveIndex} />
     </div>
 </Card>
 
@@ -83,9 +79,6 @@
     }
     .actions {
         background-color: var(--color-secondary);
-        border-width: 1px 0;
-        border-style: solid;
-        border-color: var(--color-secondary);
         width: 100%;
         display: flex;
     }
