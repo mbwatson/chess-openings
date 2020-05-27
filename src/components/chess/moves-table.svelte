@@ -8,8 +8,6 @@
     $: movesArray = moves.length % 2 === 0
         ? pairMoves(moves)
         : pairMoves(moves.slice(0, -1)).concat({white: moves[moves.length - 1]})
-    $: console.log(moves)
-    $: console.table(movesArray)
 </script>
 
 <table class="moves-table">
