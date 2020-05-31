@@ -119,7 +119,7 @@ img {
   /*margin-right: 0.2rem;*/
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   filter: brightness(1.2);
 }
 
